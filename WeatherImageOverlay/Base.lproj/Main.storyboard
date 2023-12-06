@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WeatherImageOverlay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmt-6x-6pS">
+                                <rect key="frame" x="136" y="85" width="121" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="F98-i5-j5d"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Select Photo" cornerStyle="fixed"/>
+                                <connections>
+                                    <action selector="selectPhotoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Owd-ym-nzR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-uJ-YOV">
+                                <rect key="frame" x="0.0" y="151" width="393" height="667"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sbT-uJ-YOV" firstAttribute="top" secondItem="gmt-6x-6pS" secondAttribute="bottom" constant="26" id="1cA-kw-npL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sbT-uJ-YOV" secondAttribute="trailing" id="MXU-a8-3ec"/>
+                            <constraint firstItem="sbT-uJ-YOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e0f-yK-BOV"/>
+                            <constraint firstItem="gmt-6x-6pS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAG-Qr-19h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sbT-uJ-YOV" secondAttribute="bottom" id="jLd-9W-Ff3"/>
+                            <constraint firstItem="gmt-6x-6pS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="pJV-fF-SRq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="sbT-uJ-YOV" id="f6m-zK-Rqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholderPhoto" width="375" height="375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
