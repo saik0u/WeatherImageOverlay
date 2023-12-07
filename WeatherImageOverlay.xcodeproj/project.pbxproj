@@ -188,9 +188,9 @@
 			children = (
 				43FC422E2B1F1207006C8CCF /* AppDelegate.swift */,
 				43FC42302B1F1207006C8CCF /* SceneDelegate.swift */,
-				43DC80E52B211A9B008124FD /* Model */,
 				43DC80EA2B212479008124FD /* View */,
 				43DC80EB2B21248F008124FD /* Controller */,
+				43DC80E52B211A9B008124FD /* Model */,
 				43DC80ED2B212530008124FD /* Extensions */,
 				43DC80EC2B2124A9008124FD /* SupportingFiles */,
 			);

@@ -99,6 +99,7 @@ class MainViewController: UIViewController {
                   let originalImageWidth = self.photoImageView.image?.size.width,
                   let originalImageHeight = self.photoImageView.image?.size.height
             else {
+                self?.showAlert(title: LocalizedString.somethingHappened, message: LocalizedString.alertMsgNoData)
                 return
             }
 

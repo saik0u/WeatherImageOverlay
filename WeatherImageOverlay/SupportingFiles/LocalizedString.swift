@@ -11,6 +11,7 @@ enum LocalizedString {
     // No access to photos
     static let alertTitleNoAccess = "App might not work properly".localized
     static let alertMsgNoAccess = "Please allow access to photos so we can do our magic!".localized
+    static let alertMsgNoData = "Unable to retrieve photo metadata".localized
 
     // No photo meta
     static let alertTitlePickAnother = "Please pick another photo".localized
