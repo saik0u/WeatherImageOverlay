@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43DC80E42B211A78008124FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80E32B211A78008124FD /* NetworkManager.swift */; };
+		43DC80E72B211AB2008124FD /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80E62B211AB2008124FD /* WeatherResponse.swift */; };
+		43DC80E92B211ADC008124FD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80E82B211ADB008124FD /* API.swift */; };
+		43DC80EF2B212547008124FD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80EE2B212547008124FD /* UIViewController+Alert.swift */; };
+		43DC80F12B2135BB008124FD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F02B2135BB008124FD /* NetworkError.swift */; };
+		43DC80F32B213A5C008124FD /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F22B213A5C008124FD /* String+Localizable.swift */; };
+		43DC80F52B213A8E008124FD /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F42B213A8E008124FD /* LocalizedString.swift */; };
 		43FC422F2B1F1207006C8CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC422E2B1F1207006C8CCF /* AppDelegate.swift */; };
 		43FC42312B1F1207006C8CCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC42302B1F1207006C8CCF /* SceneDelegate.swift */; };
 		43FC42332B1F1207006C8CCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC42322B1F1207006C8CCF /* MainViewController.swift */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43DC80E32B211A78008124FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		43DC80E62B211AB2008124FD /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		43DC80E82B211ADB008124FD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		43DC80EE2B212547008124FD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		43DC80F02B2135BB008124FD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		43DC80F22B213A5C008124FD /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		43DC80F42B213A8E008124FD /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		43FC422B2B1F1207006C8CCF /* WeatherImageOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherImageOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FC422E2B1F1207006C8CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FC42302B1F1207006C8CCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +90,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43DC80E52B211A9B008124FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43DC80E32B211A78008124FD /* NetworkManager.swift */,
+				43DC80E82B211ADB008124FD /* API.swift */,
+				43DC80E62B211AB2008124FD /* WeatherResponse.swift */,
+				43DC80F02B2135BB008124FD /* NetworkError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43DC80EA2B212479008124FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43FC42342B1F1207006C8CCF /* Main.storyboard */,
+				43FC42392B1F1209006C8CCF /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43DC80EB2B21248F008124FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43FC42322B1F1207006C8CCF /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		43DC80EC2B2124A9008124FD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				43FC42372B1F1209006C8CCF /* Assets.xcassets */,
+				43FC423C2B1F1209006C8CCF /* Info.plist */,
+				43DC80F42B213A8E008124FD /* LocalizedString.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		43DC80ED2B212530008124FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43DC80EE2B212547008124FD /* UIViewController+Alert.swift */,
+				43DC80F22B213A5C008124FD /* String+Localizable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		43FC42222B1F1207006C8CCF = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +162,11 @@
 			children = (
 				43FC422E2B1F1207006C8CCF /* AppDelegate.swift */,
 				43FC42302B1F1207006C8CCF /* SceneDelegate.swift */,
-				43FC42322B1F1207006C8CCF /* MainViewController.swift */,
-				43FC42342B1F1207006C8CCF /* Main.storyboard */,
-				43FC42372B1F1209006C8CCF /* Assets.xcassets */,
-				43FC42392B1F1209006C8CCF /* LaunchScreen.storyboard */,
-				43FC423C2B1F1209006C8CCF /* Info.plist */,
+				43DC80E52B211A9B008124FD /* Model */,
+				43DC80EA2B212479008124FD /* View */,
+				43DC80EB2B21248F008124FD /* Controller */,
+				43DC80ED2B212530008124FD /* Extensions */,
+				43DC80EC2B2124A9008124FD /* SupportingFiles */,
 			);
 			path = WeatherImageOverlay;
 			sourceTree = "<group>";
@@ -258,9 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DC80F52B213A8E008124FD /* LocalizedString.swift in Sources */,
+				43DC80E42B211A78008124FD /* NetworkManager.swift in Sources */,
+				43DC80F12B2135BB008124FD /* NetworkError.swift in Sources */,
+				43DC80E72B211AB2008124FD /* WeatherResponse.swift in Sources */,
 				43FC42332B1F1207006C8CCF /* MainViewController.swift in Sources */,
 				43FC422F2B1F1207006C8CCF /* AppDelegate.swift in Sources */,
+				43DC80F32B213A5C008124FD /* String+Localizable.swift in Sources */,
+				43DC80E92B211ADC008124FD /* API.swift in Sources */,
 				43FC42312B1F1207006C8CCF /* SceneDelegate.swift in Sources */,
+				43DC80EF2B212547008124FD /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,9 +511,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HK9JJV3S2C;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherImageOverlay/Info.plist;
+				INFOPLIST_FILE = WeatherImageOverlay/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -459,9 +527,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nsd.WeatherImageOverlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,9 +544,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HK9JJV3S2C;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherImageOverlay/Info.plist;
+				INFOPLIST_FILE = WeatherImageOverlay/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -489,9 +560,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nsd.WeatherImageOverlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
