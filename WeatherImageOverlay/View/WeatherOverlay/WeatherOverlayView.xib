@@ -20,6 +20,10 @@
             <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-WY-bAQ" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                    <color key="backgroundColor" systemColor="tintColor"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[City Name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-Sk-Y4o">
                     <rect key="frame" x="24" y="24" width="452" height="214"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
@@ -39,19 +43,23 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemCyanColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Sad-Sk-Y4o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="4XJ-ea-P59"/>
                 <constraint firstAttribute="bottom" secondItem="wNb-ZP-ai6" secondAttribute="bottom" constant="24" id="Dg6-iL-rpk"/>
                 <constraint firstItem="NLL-Oe-A0c" firstAttribute="leading" secondItem="wNb-ZP-ai6" secondAttribute="trailing" constant="24" id="Kts-uC-DJa"/>
                 <constraint firstItem="NLL-Oe-A0c" firstAttribute="height" secondItem="wNb-ZP-ai6" secondAttribute="height" id="LAe-3z-QTk"/>
                 <constraint firstAttribute="trailing" secondItem="Sad-Sk-Y4o" secondAttribute="trailing" constant="24" id="N3w-4E-mUY"/>
+                <constraint firstItem="BiB-WY-bAQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ogm-Ab-ctE"/>
                 <constraint firstAttribute="bottom" secondItem="NLL-Oe-A0c" secondAttribute="bottom" constant="24" id="RVM-3I-mnD"/>
                 <constraint firstItem="wNb-ZP-ai6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="RxW-np-Vsf"/>
+                <constraint firstItem="BiB-WY-bAQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Y1R-cW-NZL"/>
                 <constraint firstItem="NLL-Oe-A0c" firstAttribute="top" secondItem="Sad-Sk-Y4o" secondAttribute="bottom" constant="24" id="b4u-qZ-8tO"/>
+                <constraint firstAttribute="bottom" secondItem="BiB-WY-bAQ" secondAttribute="bottom" id="drZ-fO-cOA"/>
                 <constraint firstItem="NLL-Oe-A0c" firstAttribute="width" secondItem="wNb-ZP-ai6" secondAttribute="width" id="hFf-xo-wZ1"/>
                 <constraint firstItem="wNb-ZP-ai6" firstAttribute="top" secondItem="Sad-Sk-Y4o" secondAttribute="bottom" constant="24" id="ivs-3o-U7t"/>
                 <constraint firstItem="Sad-Sk-Y4o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="oeZ-2D-MZU"/>
+                <constraint firstAttribute="trailing" secondItem="BiB-WY-bAQ" secondAttribute="trailing" id="xBy-dE-Gr0"/>
                 <constraint firstAttribute="trailing" secondItem="NLL-Oe-A0c" secondAttribute="trailing" constant="24" id="y8n-CT-Dxg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -59,8 +67,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
