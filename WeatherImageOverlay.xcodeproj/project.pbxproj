@@ -14,6 +14,12 @@
 		43DC80F12B2135BB008124FD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F02B2135BB008124FD /* NetworkError.swift */; };
 		43DC80F32B213A5C008124FD /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F22B213A5C008124FD /* String+Localizable.swift */; };
 		43DC80F52B213A8E008124FD /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80F42B213A8E008124FD /* LocalizedString.swift */; };
+		43DC80F92B21CFD3008124FD /* WeatherOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43DC80F82B21CFD3008124FD /* WeatherOverlayView.xib */; };
+		43DC80FB2B21CFE1008124FD /* WeatherOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80FA2B21CFE1008124FD /* WeatherOverlayView.swift */; };
+		43DC80FD2B21CFEF008124FD /* ReusableXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80FC2B21CFEF008124FD /* ReusableXibView.swift */; };
+		43DC80FF2B21D446008124FD /* WeatherOverlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC80FE2B21D446008124FD /* WeatherOverlayViewModel.swift */; };
+		43DC81012B21FA6B008124FD /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC81002B21FA6B008124FD /* UIView+Image.swift */; };
+		43DC81032B21FA8C008124FD /* UIImage+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC81022B21FA8C008124FD /* UIImage+Overlay.swift */; };
 		43FC422F2B1F1207006C8CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC422E2B1F1207006C8CCF /* AppDelegate.swift */; };
 		43FC42312B1F1207006C8CCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC42302B1F1207006C8CCF /* SceneDelegate.swift */; };
 		43FC42332B1F1207006C8CCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC42322B1F1207006C8CCF /* MainViewController.swift */; };
@@ -50,6 +56,12 @@
 		43DC80F02B2135BB008124FD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		43DC80F22B213A5C008124FD /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		43DC80F42B213A8E008124FD /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		43DC80F82B21CFD3008124FD /* WeatherOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherOverlayView.xib; sourceTree = "<group>"; };
+		43DC80FA2B21CFE1008124FD /* WeatherOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverlayView.swift; sourceTree = "<group>"; };
+		43DC80FC2B21CFEF008124FD /* ReusableXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableXibView.swift; sourceTree = "<group>"; };
+		43DC80FE2B21D446008124FD /* WeatherOverlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverlayViewModel.swift; sourceTree = "<group>"; };
+		43DC81002B21FA6B008124FD /* UIView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
+		43DC81022B21FA8C008124FD /* UIImage+Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Overlay.swift"; sourceTree = "<group>"; };
 		43FC422B2B1F1207006C8CCF /* WeatherImageOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherImageOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FC422E2B1F1207006C8CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FC42302B1F1207006C8CCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +118,7 @@
 			children = (
 				43FC42342B1F1207006C8CCF /* Main.storyboard */,
 				43FC42392B1F1209006C8CCF /* LaunchScreen.storyboard */,
+				43DC80F72B21CDC9008124FD /* WeatherOverlay */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,10 +144,23 @@
 		43DC80ED2B212530008124FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				43DC80FC2B21CFEF008124FD /* ReusableXibView.swift */,
 				43DC80EE2B212547008124FD /* UIViewController+Alert.swift */,
+				43DC81002B21FA6B008124FD /* UIView+Image.swift */,
+				43DC81022B21FA8C008124FD /* UIImage+Overlay.swift */,
 				43DC80F22B213A5C008124FD /* String+Localizable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		43DC80F72B21CDC9008124FD /* WeatherOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				43DC80FA2B21CFE1008124FD /* WeatherOverlayView.swift */,
+				43DC80F82B21CFD3008124FD /* WeatherOverlayView.xib */,
+				43DC80FE2B21D446008124FD /* WeatherOverlayViewModel.swift */,
+			);
+			path = WeatherOverlay;
 			sourceTree = "<group>";
 		};
 		43FC42222B1F1207006C8CCF = {
@@ -292,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DC80F92B21CFD3008124FD /* WeatherOverlayView.xib in Resources */,
 				43FC423B2B1F1209006C8CCF /* LaunchScreen.storyboard in Resources */,
 				43FC42382B1F1209006C8CCF /* Assets.xcassets in Resources */,
 				43FC42362B1F1207006C8CCF /* Main.storyboard in Resources */,
@@ -321,12 +348,17 @@
 			files = (
 				43DC80F52B213A8E008124FD /* LocalizedString.swift in Sources */,
 				43DC80E42B211A78008124FD /* NetworkManager.swift in Sources */,
+				43DC80FB2B21CFE1008124FD /* WeatherOverlayView.swift in Sources */,
 				43DC80F12B2135BB008124FD /* NetworkError.swift in Sources */,
 				43DC80E72B211AB2008124FD /* WeatherResponse.swift in Sources */,
+				43DC81032B21FA8C008124FD /* UIImage+Overlay.swift in Sources */,
 				43FC42332B1F1207006C8CCF /* MainViewController.swift in Sources */,
 				43FC422F2B1F1207006C8CCF /* AppDelegate.swift in Sources */,
 				43DC80F32B213A5C008124FD /* String+Localizable.swift in Sources */,
 				43DC80E92B211ADC008124FD /* API.swift in Sources */,
+				43DC80FD2B21CFEF008124FD /* ReusableXibView.swift in Sources */,
+				43DC81012B21FA6B008124FD /* UIView+Image.swift in Sources */,
+				43DC80FF2B21D446008124FD /* WeatherOverlayViewModel.swift in Sources */,
 				43FC42312B1F1207006C8CCF /* SceneDelegate.swift in Sources */,
 				43DC80EF2B212547008124FD /* UIViewController+Alert.swift in Sources */,
 			);

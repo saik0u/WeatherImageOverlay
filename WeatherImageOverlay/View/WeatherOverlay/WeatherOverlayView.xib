@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherOverlayView" customModule="WeatherImageOverlay" customModuleProvider="target">
+            <connections>
+                <outlet property="cityNameLabel" destination="Sad-Sk-Y4o" id="eA0-CG-5so"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="hIa-cg-jDs"/>
+                <outlet property="tempLabel" destination="NLL-Oe-A0c" id="V6h-C2-b5x"/>
+                <outlet property="weatherIconImageView" destination="wNb-ZP-ai6" id="C0E-Rp-kBv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[City Name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-Sk-Y4o">
+                    <rect key="frame" x="24" y="24" width="452" height="214"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-ZP-ai6">
+                    <rect key="frame" x="24" y="262" width="214" height="214"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wNb-ZP-ai6" secondAttribute="height" multiplier="1:1" id="Yzf-WZ-YuZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Temp]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NLL-Oe-A0c">
+                    <rect key="frame" x="262" y="262" width="214" height="214"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemCyanColor"/>
+            <constraints>
+                <constraint firstItem="Sad-Sk-Y4o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="4XJ-ea-P59"/>
+                <constraint firstAttribute="bottom" secondItem="wNb-ZP-ai6" secondAttribute="bottom" constant="24" id="Dg6-iL-rpk"/>
+                <constraint firstItem="NLL-Oe-A0c" firstAttribute="leading" secondItem="wNb-ZP-ai6" secondAttribute="trailing" constant="24" id="Kts-uC-DJa"/>
+                <constraint firstItem="NLL-Oe-A0c" firstAttribute="height" secondItem="wNb-ZP-ai6" secondAttribute="height" id="LAe-3z-QTk"/>
+                <constraint firstAttribute="trailing" secondItem="Sad-Sk-Y4o" secondAttribute="trailing" constant="24" id="N3w-4E-mUY"/>
+                <constraint firstAttribute="bottom" secondItem="NLL-Oe-A0c" secondAttribute="bottom" constant="24" id="RVM-3I-mnD"/>
+                <constraint firstItem="wNb-ZP-ai6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="RxW-np-Vsf"/>
+                <constraint firstItem="NLL-Oe-A0c" firstAttribute="top" secondItem="Sad-Sk-Y4o" secondAttribute="bottom" constant="24" id="b4u-qZ-8tO"/>
+                <constraint firstItem="NLL-Oe-A0c" firstAttribute="width" secondItem="wNb-ZP-ai6" secondAttribute="width" id="hFf-xo-wZ1"/>
+                <constraint firstItem="wNb-ZP-ai6" firstAttribute="top" secondItem="Sad-Sk-Y4o" secondAttribute="bottom" constant="24" id="ivs-3o-U7t"/>
+                <constraint firstItem="Sad-Sk-Y4o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="oeZ-2D-MZU"/>
+                <constraint firstAttribute="trailing" secondItem="NLL-Oe-A0c" secondAttribute="trailing" constant="24" id="y8n-CT-Dxg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.29770992366412" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

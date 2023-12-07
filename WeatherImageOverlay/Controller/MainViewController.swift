@@ -59,7 +59,7 @@ class MainViewController: UIViewController {
                 return
             }
 
-            self?.city = placemarks?.first?.locality ?? "n/a"
+            self?.city = placemarks?.first?.locality
         }
     }
 
@@ -74,15 +74,49 @@ class MainViewController: UIViewController {
         let coord = (String(coordinate.latitude), String(coordinate.longitude))
         let timestamp = String(Int(date.timeIntervalSince1970))
 
+        // TODO: Add a progress spinner while we are waiting for the data
         networkManager.fetchWeatherData(coordinates: coord, timestamp: timestamp) { [weak self] result in
 
             switch result {
                 case .success(let weatherData):
-                    print("weatherData: \(weatherData)!")
+                    self?.createOverlay(from: weatherData)
 
                 case .failure(let error):
                     self?.showAlert(title: LocalizedString.somethingHappened, message: error.localizedDescription)
             }
+        }
+    }
+
+    private func createOverlay(from data: WeatherResponse?) {
+        let city = city
+        let icon = data?.data.first?.weather.first?.icon
+        var temp = data?.data.first?.temp
+
+        let overlayViewModel = WeatherOverlayViewModel(cityName: city, iconName: icon, temp: temp)
+
+        DispatchQueue.main.async { [weak self] in
+            guard let self,
+                  let originalImageWidth = self.photoImageView.image?.size.width,
+                  let originalImageHeight = self.photoImageView.image?.size.height
+            else {
+                return
+            }
+
+            // Create the WeatherOverlayView
+            let overlayView = WeatherOverlayView()
+            overlayView.configure(with: overlayViewModel)
+
+            // Update its frame to fit the original image
+            let maxSize = min(originalImageWidth / 3, originalImageHeight / 3)
+            let frame = CGRect(x: 0, y: 0, width: maxSize, height: maxSize)
+            overlayView.frame = frame
+            overlayView.layoutIfNeeded()
+
+            // Convert it to a UIImage and overlay them
+            let overlayImage = overlayView.asImage()
+            let compositeImage = self.photoImageView.image?.overlayBottomLeftWith(image: overlayImage)
+
+            self.photoImageView.image = compositeImage
         }
     }
 
@@ -111,7 +145,7 @@ extension MainViewController: PHPickerViewControllerDelegate {
             requestWeatherData(coordinate: assetResults.firstObject?.location?.coordinate, date: assetResults.firstObject?.creationDate)
         }
 
-        // Get the UIImage
+        // Get the UIImage and set it
         if selectedImageResult.itemProvider.canLoadObject(ofClass: UIImage.self) {
             selectedImageResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (selectedImage, error) in
                 guard let image = selectedImage as? UIImage else {

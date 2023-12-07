@@ -27,8 +27,6 @@ struct NetworkManager: NetworkManagerProtocol {
         + "&units=metric"
         + "&appid=\(API.apiKey)"
 
-        print("url: \(url)")
-
         guard let url = URL(string: url) else {
             completion(.failure(NetworkError.badURL))
             return
